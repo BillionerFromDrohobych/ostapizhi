@@ -25,8 +25,13 @@ public class ActivityActivity extends AppCompatActivity {
         setContentView(R.layout.activity);
         //add new City
         cityList = new ArrayList<>();
-        cityList.add(new City("Kyiv", R.drawable.unnamed,0,0,"", "s", false, "vul. Saint Ostapuchi"));
-        cityList.add(new City("Lviv", R.drawable.unnamed,0,0,"", "s", false, "vul. Saint Ostapuchi"));
+        cityList.add(new City("Kyiv", R.drawable.kiev,0,0,"", "s", false, "vul. Saint Ostapuchi"));
+        cityList.add(new City("Lviv", R.drawable.lviw,0,0,"", "s", false, "vul. Saint Ostapuchi"));
+        cityList.add(new City("Drohobych", R.drawable.drogobych,0,0,"", "s", false, "vul. Saint Ostapuchi"));
+        cityList.add(new City("Kharkiv", R.drawable.kharkiv,0,0,"", "s", false, "vul. Saint Ostapuchi"));
+        cityList.add(new City("London", R.drawable.london,0,0,"", "s", false, "vul. Saint Ostapuchi"));
+
+
         //RecyclerView
         recyclerView = findViewById(R.id.cityRecyclerView);
         recyclerViewAdapter = new RecyclerViewAdapter(this, cityList);
@@ -77,8 +82,8 @@ public class ActivityActivity extends AppCompatActivity {
             editText.setText("");
 
             cityList.clear();
-            cityList.add(new City("Kyiv", R.drawable.unnamed,0,0,"", "s", false, "vul. Saint Ostapuchi"));
-            cityList.add(new City("Lviv", R.drawable.unnamed,0,0,"", "s", false, "vul. Saint Ostapuchi"));
+            cityList.add(new City("Kyiv", R.drawable.kiev,0,0,"", "s", false, "vul. Saint Ostapuchi"));
+            cityList.add(new City("Lviv", R.drawable.lviw,0,0,"", "s", false, "vul. Saint Ostapuchi"));
 
             recyclerViewAdapter.notifyDataSetChanged();
 

@@ -69,15 +69,15 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyVie
             switch (name) {
                 case "Kyiv":
                     cityList.clear();
-                    cityList.add(new City("KPI", R.drawable.unnamed, R.drawable.unnamed, R.drawable.unnamed, "geo:50.454978,30.445443?q=Igor Sikorsky Kyiv Polytechnic Institute", "s", true, "vul. Saint Ostapuchi"));
+                    cityList.add(new City("Igor Sikorsky Kyiv Polytechnic Institute", R.drawable.unnamed, R.drawable.unnamed, R.drawable.unnamed, "geo:50.454978,30.445443?q=Igor Sikorsky Kyiv Polytechnic Institute", "s", true, "vul. Saint Ostapuchi"));
                     cityList.add(new City("KPI2", R.drawable.unnamed, R.drawable.unnamed, R.drawable.unnamed, "geo:50.454978,30.445443?q=Igor Sikorsky Kyiv Polytechnic Institute", "s", true, "vul. Saint Ostapuchi"));
                     cityList.add(new City("KPI3", R.drawable.unnamed, R.drawable.unnamed, R.drawable.unnamed, "geo:50.454978,30.445443?q=Igor Sikorsky Kyiv Polytechnic Institute", "s", true, "vul. Saint Ostapuchi"));
                     break;
                 case "Lviv":
                     cityList.clear();
-                    cityList.add(new City("LP", R.drawable.unnamed, R.drawable.unnamed, R.drawable.unnamed, "geo:50.454978,30.445443?q=Igor Sikorsky Kyiv Polytechnic Institute", "s", true, "vul. Saint Ostapuchi"));
-                    cityList.add(new City("LP2", R.drawable.unnamed, R.drawable.unnamed, R.drawable.unnamed, "geo:50.454978,30.445443?q=Igor Sikorsky Kyiv Polytechnic Institute", "s", true, "vul. Saint Ostapuchi"));
-                    cityList.add(new City("LP3", R.drawable.unnamed, R.drawable.unnamed, R.drawable.unnamed, "geo:50.454978,30.445443?q=Igor Sikorsky Kyiv Polytechnic Institute", "s", true, "vul. Saint Ostapuchi"));
+                    cityList.add(new City("Lviv High Castle", R.drawable.high, R.drawable.high1, R.drawable.high2, "geo:49.848289,24.039417?q=Lviv High Castle", "s", true, "Lviv High Castle, Lviv, Lviv region, 79000"));
+                    cityList.add(new City("Hotel ibis Styles", R.drawable.ibis, R.drawable.ibis1, R.drawable.ibis2, "geo:49.837358,24.035014?q=Hotel ibis Styles", "s", true, " 3 Shukhevycha str., Lviv, Lviv region, 79000"));
+                    cityList.add(new City("Black House", R.drawable.black_house, R.drawable.black_house1, R.drawable.black_house2, "geo:49.841562,24.031144?q=Black House", "s", true, "Market Square, 18, Lviv, Lviv Oblast, 79000 "));
                     break;
             }
             }else if(sightorcity == true) {
