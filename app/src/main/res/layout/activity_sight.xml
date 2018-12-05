@@ -23,9 +23,9 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/imageView2"
         android:text="Kiev Politechnik University"
-        android:textAlignment="center"
         android:textColor="@android:color/background_dark"
         android:textSize="25sp"
+        android:gravity="center"
         android:textStyle="normal" />
 
     <TextView
@@ -36,7 +36,7 @@
         android:layout_centerHorizontal="true"
         android:layout_weight="8"
         android:text="Location"
-        android:textAlignment="gravity"
+        android:textAlignment="center"
         android:textColor="@android:color/background_dark"
         android:textSize="16sp" />
 
@@ -67,23 +67,27 @@
         android:id="@+id/imageView3"
         android:layout_width="120dp"
         android:layout_height="80dp"
+        android:layout_above="@+id/imageButton"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView3"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="45dp"
         android:clickable="true" />
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="120dp"
         android:layout_height="80dp"
+        android:layout_above="@+id/imageButton"
         android:layout_alignParentEnd="true"
-        android:layout_below="@+id/textView3"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="45dp"
         android:clickable="true" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="120dp"
         android:layout_height="80dp"
-        android:layout_below="@+id/textView3"
+        android:layout_alignTop="@+id/imageButton"
         android:layout_centerHorizontal="true"
         android:clickable="true" />
 

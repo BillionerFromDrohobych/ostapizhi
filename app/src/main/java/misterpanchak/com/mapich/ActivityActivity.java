@@ -77,5 +77,17 @@ public class ActivityActivity extends AppCompatActivity {
         return true;
     }
 
+            cityList.clear();
+            cityList.add(new City("Kyiv", R.drawable.kiev,0,0,"", "s", false, "vul. Saint Ostapuchi"));
+            cityList.add(new City("Lviv", R.drawable.lviw,0,0,"", "s", false, "vul. Saint Ostapuchi"));
+            cityList.add(new City("Drohobych", R.drawable.drogobych,0,0,"", "s", false, "vul. Saint Ostapuchi"));
+            cityList.add(new City("Kharkiv", R.drawable.kharkiv,0,0,"", "s", false, "vul. Saint Ostapuchi"));
+            cityList.add(new City("London", R.drawable.london,0,0,"", "s", false, "vul. Saint Ostapuchi"));
+            recyclerViewAdapter.notifyDataSetChanged();
+
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
 
