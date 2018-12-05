@@ -19,17 +19,19 @@ public class ActivityActivity extends AppCompatActivity {
     RecyclerViewAdapter recyclerViewAdapter;
     RecyclerView recyclerView;
     EditText editText;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity);
         //add new City
         cityList = new ArrayList<>();
-        cityList.add(new City("Kyiv", R.drawable.kiev,0,0,"", "s", false, "vul. Saint Ostapuchi"));
-        cityList.add(new City("Lviv", R.drawable.lviw,0,0,"", "s", false, "vul. Saint Ostapuchi"));
-        cityList.add(new City("Drohobych", R.drawable.drogobych,0,0,"", "s", false, "vul. Saint Ostapuchi"));
-        cityList.add(new City("Kharkiv", R.drawable.kharkiv,0,0,"", "s", false, "vul. Saint Ostapuchi"));
-        cityList.add(new City("London", R.drawable.london,0,0,"", "s", false, "vul. Saint Ostapuchi"));
+        cityList.add(new City("Kyiv", R.drawable.kiev,0,0,"", "s", false, "vul. Saint Ostapuchi",0,0));
+        cityList.add(new City("Lviv", R.drawable.lviw,0,0,"", "s", false, "vul. Saint Ostapuchi",0,0));
+        cityList.add(new City("Drohobych", R.drawable.drogobych,0,0,"", "s", false, "vul. Saint Ostapuchi",0,0));
+        cityList.add(new City("Kharkiv", R.drawable.kharkiv,0,0,"", "s", false, "vul. Saint Ostapuchi",0,0));
+        cityList.add(new City("London", R.drawable.london,0,0,"", "s", false, "vul. Saint Ostapuchi",0,0));
 
 
         //RecyclerView
@@ -71,25 +73,9 @@ public class ActivityActivity extends AppCompatActivity {
         recyclerViewAdapter.filteredListed(filteredList);
     }
     public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.actionbar, menu);
+        getMenuInflater().inflate(R.menu.namebar, menu);
         return true;
     }
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
 
-
-        if (id == R.id.refreshicon) {
-            editText.setText("");
-
-            cityList.clear();
-            cityList.add(new City("Kyiv", R.drawable.kiev,0,0,"", "s", false, "vul. Saint Ostapuchi"));
-            cityList.add(new City("Lviv", R.drawable.lviw,0,0,"", "s", false, "vul. Saint Ostapuchi"));
-
-            recyclerViewAdapter.notifyDataSetChanged();
-
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
 }
 

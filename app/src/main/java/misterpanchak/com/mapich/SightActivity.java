@@ -15,18 +15,23 @@ public class SightActivity extends AppCompatActivity implements View.OnClickList
     int imgurl, imgurl1, imgurl2;
     TextView textView;
     ImageView imageview;
+    double latitude;
+    double longtitude;
 
     ImageButton imageButton;
     Intent intent1;
     TextView tx3;
     ImageView imageView3, imageView5, imageView6;
     String geo;
+    String name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sight);
         Intent intent = getIntent();
-        String name = intent.getExtras().getString("name");
+        name = intent.getExtras().getString("name");
+        latitude = intent.getExtras().getDouble("latitude");
+        longtitude = intent.getExtras().getDouble("longtitude");
         String adress = intent.getExtras().getString("adress");
         imgurl = intent.getExtras().getInt("imgurl");
         imgurl1 = intent.getExtras().getInt("imgUrl1");
@@ -37,6 +42,7 @@ public class SightActivity extends AppCompatActivity implements View.OnClickList
         imageButton = (ImageButton) findViewById(R.id.imageButton);
         tx3 = (TextView) findViewById(R.id.textView3);
         textView.setText(name);
+
         imageview.setImageResource(imgurl);
         tx3.setText(adress);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -60,7 +66,7 @@ public class SightActivity extends AppCompatActivity implements View.OnClickList
             case R.id.imageButton:
                 intent1 = new Intent();
                 intent1.setAction(Intent.ACTION_VIEW);
-                intent1.setData(Uri.parse(geo));
+                intent1.setData(Uri.parse("geo:" + longtitude + "," + latitude + "?q=" + name));
                 startActivity(intent1);
                 break;
             case R.id.imageView3:

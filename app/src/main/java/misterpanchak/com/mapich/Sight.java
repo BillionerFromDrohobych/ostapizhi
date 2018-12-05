@@ -1,6 +1,6 @@
 package misterpanchak.com.mapich;
 
-public class City {
+public class Sight {
     private String Name;
     private int imgUrl;
     private int imgUrl1;
@@ -14,7 +14,7 @@ public class City {
 
 
 
-    public City(String name, int imgUrl,int imgUrl1,int imgUrl2, String location, String desctriptionk,boolean sightorcity, String adress, double longtitude, double latitude) {
+    public Sight(String name, int imgUrl,int imgUrl1,int imgUrl2, String location, String desctriptionk,boolean sightorcity, String adress, double longtitude, double latitude) {
         Name = name;
         this.imgUrl = imgUrl;
         this.imgUrl1 = imgUrl1;
@@ -105,4 +105,5 @@ public class City {
     public void setLatitude(double latitude) {
         this.latitude = latitude;
     }
+
 }
